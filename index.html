@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This code (HTML, CSS, Javascript, Etc) belongs to Power Sports Magazine and it's prohibited any type of reproduction --> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>JRZ Sports Map</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--Google MAPS API -->
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,700italic);
+      @media only screen and (max-width: 479px){
+
+	  body{
+	      background-image: url('http://www.powersportsmagazine.com/wp-content/uploads/2014/07/linea-copy1.png');
+	      background-repeat: repeat;
+	      background-position: top left;
+	      background-attachment: fixed;
+	      height:100%;
+	      font-family: 'Titillium Web', sans-serif;
+	  }
+	  
+	  .infoWindow{
+	      width: 100%;
+	      height: 13em;
+	      overflow: auto;
+	      background-color:#FAE6FA;
+	      border: 1px solid;
+	      border-radius:5px; 
+	      padding: 0 0.5em;
+	  }
+
+	  #map-canvas{
+	      width:100%;
+	      height:420px;
+	      background-color:#CCC;
+	  }
+	  
+
+	  
+	  .contain{
+	      width: 100%;
+	      height: 100%;
+	      padding-left:0%;
+	      
+	  }
+
+	  
+	  #legend {
+	      background-color:#FFF;
+	      padding: 10px;
+	      height: 30%;
+	      width: 150px; 
+	      margin:4px;
+	      border: 1px solid;
+	      border-radius: 5px;
+	      overflow-y:scroll;
+
+	      
+	  }
+
+
+
+      }
+
+      @media(min-width:480px){
+	  
+	  body{
+	      background-image: url('http://www.powersportsmagazine.com/wp-content/uploads/2014/07/linea-copy1.png');
+	      background-repeat: repeat;
+	      background-position: top left;
+	      background-attachment: fixed;
+	      height:100%;
+	      font-family: 'Titillium Web', sans-serif;
+	  }
+
+	  .infoWindow{
+	      background-color:#FAE6FA;
+	      border: 1px solid;
+	      border-radius:5px; 
+	      padding: 0 1em 0.5em 1em;
+	  }
+	  
+	  #map-canvas{
+	      width:100%;
+	      height:600px;
+	      background-color:#CCC;
+	  }
+	  
+	  
+	  
+	   
+	  .contain{
+	      width: 100%;
+	      height: 100%;
+	      padding-left:0%;
+	      
+	  }
+	  
+	  
+	  #legend {
+	      background-color:#FFF;
+	      padding: 10px;
+	      height: 30%;
+	      margin:4px;
+	      border: 1px;
+	      border-style: solid;
+	      overflow-y:scroll;
+	      -webkit-overflow-scrolling: touch;
+	      
+	  }
+
+
+      }
+
+      @media(min-height:1000px){
+	  
+	  body{
+	      background-image: url('http://www.powersportsmagazine.com/wp-content/uploads/2014/07/linea-copy1.png');
+	      background-repeat: repeat;
+	      background-position: top left;
+	      background-attachment: fixed;
+	      height:100%;
+	      font-family: 'Titillium Web', sans-serif;
+	  }
+
+	  .infoWindow{
+
+	      width: 250px;
+	      height: 200px;
+	      overflow: auto;
+	      background-color:#FAE6FA;
+	      border: 1px solid;
+	      border-radius:10px; 
+	      padding: 0em 1em 0.5em 1em;
+	  }
+	  
+	  #map-canvas{
+	      width:100%;
+	      height:950px;
+	      background-color:#CCC;
+	  }
+	 	   
+	  .contain{
+	      width: 100%;
+	      height: 100%;
+	      padding-left:0%;
+	      
+	  }
+	 	  
+	  #legend {
+	      background-color:#FFF;
+	      padding: 10px;
+	      height: 30%;
+	      margin:4px;
+	      border: 1px;
+	      border-style: solid;
+	      overflow-y:scroll;
+	      -webkit-overflow-scrolling: touch;
+	      
+	  }
+
+
+      }
+
+      	  #header{
+	      width: 100%;
+	      height: 2.5em;
+	      background: #FAE6FA;
+	      text-align:center;
+	      padding: 0.5em;
+	      position: relative;
+	      top: -2em;
+	      
+	  }
+
+    </style>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="http://www.powersportsmagazine.com">
+	    &laquo; Regresar a Power Sports Magazine
+	  </a>
+	  
+	</div>
+      </div>
+    </nav>
+    <div id="header"> JRZ-SMAP es un producto de Power Sports Magazine </div>    
+    <div class="container">
+    <div class="contain">
+      <div id="map-canvas"></div>
+      <div id="legend"></div>
+      <div id="buttons"></div>
+    </div>
+
+
+
+
+
+    
+    
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="js/script.js" ></script>
+  </body>
+</html>

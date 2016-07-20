@@ -1,0 +1,31 @@
+var icons = {
+              mercedes: {
+                  name: 'Mercedes Benz',
+                  icon: 'images/mercedes.png'
+              },
+              totalFitness: {
+                  name:'Total Fitness',
+                  icon:'images/totalFitness.png'
+              },
+              360: {
+                  name:'360',
+                  icon:'images/360.png'
+
+              },
+              otro: {
+                  name: 'Otro',
+                  icon: iconBase + 'library_maps.png'
+              },
+              PHARMEX: {
+                  name: 'Pharmex',
+                  icon: iconBase + 'library_maps.png'
+              },
+              NORALI: {
+                  name: 'Norali',
+                  icon: iconBase + 'library_maps.png'
+              },
+              REMOTION: {
+                  name: 'Remotion',
+                  icon: iconBase + 'library_maps.png'
+              },
+

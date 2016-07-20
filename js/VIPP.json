@@ -1,0 +1,50 @@
+VIPCallback({
+  "mercedes":{
+    "position": "",
+    "latitude": "31.738461",
+    "longitude": "-106.432013",
+    "type": "business",
+    "name": "Mercedes Benz",
+    "email": "touche-motors@dchrysler.com.mx",
+    "phone": "(656) 6-17-14-16",
+    "address": " Paseo Triunfo de la República,   6080",
+    "icon": "images/mercedes.png",
+    "website": "http://www.touche-motors.com.mx"
+  },
+  "totalFitness":{
+    "position": "",
+    "latitude": "31.686519",
+    "longitude": "-106.408988",
+    "type": "health",
+    "name": "Total Fitness",
+    "email": "juarez@totalfitnessmexico.com",
+    "phone": "(656) 6-48-21-40",
+    "address": " Teófilo Borunda, 8681, Local 11",
+    "icon": "images/totalFitness.png",
+    "website": "http://totalfitnessmexico.com/ciudadjuarez/"
+  },
+  "360":{
+    "position": "",
+    "latitude": "31.708509",
+    "longitude": "-106.406464",
+    "type": "health",
+    "name": "360 Fit Center",
+    "email": "info@gimnasio360.com",
+    "phone": "(656) 6-48-5360",
+    "address": " Blvd. Gomez Morin, 8130",
+    "icon": "images/360.png",
+    "website": "http://www.gimnasio360.com/"
+  },
+    "karim":{
+    "position": "",
+    "latitude": "31.668636",
+    "longitude": "-106.398474",
+    "type": "school",
+    "name": "Karim TaeKwondo",
+    "email": "info@gimnasio360.com",
+    "phone": "(656) 215-3554",
+    "address": " Av. Paseo de la Victoria, 9750, Plaza san Andres Infonavit ",
+    "icon": "images/karim.png",
+    "website": "http://www.facebook.com/KarimTaekwondo"
+    }
+});
